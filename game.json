@@ -1,8 +1,16 @@
 {
+  "$schema": "https://raw.githubusercontent.com/pewplay/pewplay/main/schema/game.schema.json",
   "title": "90-Second Minesweeper",
   "description": "Clear the minefield before the 90-second timer runs out. Play this fast-paced classic puzzle game for free in your browser.",
-  "keywords": ["minesweeper", "puzzle", "logic", "retro", "speedrun", "timer"],
   "category": "Puzzle",
+  "tags": [
+    "minesweeper",
+    "puzzle",
+    "logic",
+    "retro",
+    "speedrun",
+    "timer"
+  ],
   "author": "PewPlay",
   "playMode": "SinglePlayer"
 }
