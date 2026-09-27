@@ -2,6 +2,36 @@
   "$schema": "https://raw.githubusercontent.com/pewplay/pewplay/main/schema/game.schema.json",
   "title": "90-Second Minesweeper",
   "description": "Clear the minefield before the 90-second timer runs out. Play this fast-paced classic puzzle game for free in your browser.",
+  "about": "90-Second Minesweeper is a browser game where you reveal safe squares and use the clues to locate the mines before the timer runs out. Flag suspected mines.\n\nStart a round in your browser and use the controls below to play.",
+  "howToPlay": "Reveal safe squares and use the clues to locate the mines before the timer runs out. Flag suspected mines.",
+  "controls": [
+    {
+      "input": "Click / tap",
+      "action": "Reveal a square"
+    },
+    {
+      "input": "Right click",
+      "action": "Flag a suspected mine"
+    },
+    {
+      "input": "Smiley button",
+      "action": "Restart"
+    }
+  ],
+  "tips": [
+    "Use click / tap to reveal a square.",
+    "Try another round to practice the timing and strategy."
+  ],
+  "faq": [
+    {
+      "question": "How do I play 90-Second Minesweeper?",
+      "answer": "Reveal safe squares and use the clues to locate the mines before the timer runs out. Flag suspected mines."
+    },
+    {
+      "question": "Can I play 90-Second Minesweeper in a browser?",
+      "answer": "Yes. Open the game page and play without installing an app."
+    }
+  ],
   "category": "Puzzle",
   "tags": [
     "minesweeper",
@@ -11,6 +41,9 @@
     "speedrun",
     "timer"
   ],
-  "author": "PewPlay",
-  "playMode": "SinglePlayer"
+  "playMode": "SinglePlayer",
+  "orientation": "any",
+  "cover": "cover.png",
+  "draft": true,
+  "author": "PewPlay"
 }
