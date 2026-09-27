@@ -1,49 +1,58 @@
 {
   "$schema": "https://raw.githubusercontent.com/pewplay/pewplay/main/schema/game.schema.json",
   "title": "90-Second Minesweeper",
-  "description": "Clear the minefield before the 90-second timer runs out. Play this fast-paced classic puzzle game for free in your browser.",
-  "about": "90-Second Minesweeper is a browser game where you reveal safe squares and use the clues to locate the mines before the timer runs out. Flag suspected mines.\n\nStart a round in your browser and use the controls below to play.",
-  "howToPlay": "Reveal safe squares and use the clues to locate the mines before the timer runs out. Flag suspected mines.",
+  "description": "Flag all 20 hidden mines on a 10x10 minefield before the 90-second clock runs out in this fast, free Minesweeper game in your browser.",
+  "about": "90-Second Minesweeper takes the classic logic puzzle and adds a ticking clock. The 10x10 board hides 20 mines, and every number you uncover tells you how many of them touch that square. Read the clues, mark each mine with a flag and do it all in a minute and a half.\n\nThe pressure changes how you play. There is no time to overthink every corner, so you learn to spot safe patterns quickly and trust your deductions. Uncover a mine or let the timer hit 90 and the game ends, showing where every bomb was hidden. A little emoji face reacts to each move, from nervous to cool when you win.\n\nIt is a great quick challenge for Minesweeper fans and anyone who enjoys short, tense logic puzzles.",
+  "howToPlay": "Reveal squares to uncover numbers that show how many mines touch that square; empty areas open up automatically. Mark every mine with a flag: you win when all 20 mines are flagged. Revealing a mine or running out of the 90 seconds ends the game, and the face button starts a new board.",
   "controls": [
     {
-      "input": "Click / tap",
+      "input": "Click / Tap",
       "action": "Reveal a square"
     },
     {
-      "input": "Right click",
-      "action": "Flag a suspected mine"
+      "input": "Right-click / Long-press",
+      "action": "Place or remove a flag"
     },
     {
-      "input": "Smiley button",
-      "action": "Restart"
+      "input": "Face button",
+      "action": "Start a new game"
     }
   ],
   "tips": [
-    "Use click / tap to reveal a square.",
-    "Try another round to practice the timing and strategy."
+    "Start by clicking near the middle: a square with no mines around it opens a big area at once.",
+    "A 1 touching only one hidden square means that square is a mine, so flag it right away.",
+    "The flag counter shows how many mines are left to find, and you only have 20 flags.",
+    "Do not waste seconds on a pure guess early on; solve the obvious squares first."
   ],
   "faq": [
     {
-      "question": "How do I play 90-Second Minesweeper?",
-      "answer": "Reveal safe squares and use the clues to locate the mines before the timer runs out. Flag suspected mines."
+      "question": "Is 90-Second Minesweeper free to play?",
+      "answer": "Yes. It is completely free and runs in your browser with no download or sign-up."
     },
     {
-      "question": "Can I play 90-Second Minesweeper in a browser?",
-      "answer": "Yes. Open the game page and play without installing an app."
+      "question": "Can I play it on a phone or tablet?",
+      "answer": "Yes. Tap a square to reveal it and long-press to place or remove a flag; the board shrinks to fit phone screens."
+    },
+    {
+      "question": "How do I win?",
+      "answer": "Flag all 20 mines correctly before the timer reaches 90 seconds. Clearing safe squares helps you find them, but only the flags count toward the win."
     }
   ],
   "category": "Puzzle",
   "tags": [
     "minesweeper",
-    "puzzle",
     "logic",
-    "retro",
-    "speedrun",
-    "timer"
+    "timed",
+    "classic",
+    "mines"
   ],
+  "author": "PewPlay",
   "playMode": "SinglePlayer",
   "orientation": "any",
   "cover": "cover.png",
-  "draft": true,
-  "author": "PewPlay"
+  "screenshots": [
+    "screenshots/1.png",
+    "screenshots/2.png",
+    "screenshots/3.png"
+  ]
 }

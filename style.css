@@ -111,3 +111,53 @@ html {
 .four {
   color: #9F7AEA;
 }
+.grid {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
+#result {
+  text-align: center;
+}
+
+/* Phones: shrink the board so it fits a 390px wide screen */
+@media (max-width: 500px) {
+  body,
+  html {
+    margin: 0;
+  }
+  body {
+    padding: 16px 0;
+  }
+  .top {
+    width: 340px;
+    height: 76px;
+  }
+  .flag-box,
+  .timer-box {
+    width: 104px;
+    height: 62px;
+    font-size: 0.85em;
+  }
+  .emoji-btn {
+    width: 70px;
+    height: 70px;
+    margin: 0 12px;
+    font-size: 1.7em;
+  }
+  .grid {
+    width: 340px;
+    height: 340px;
+  }
+  .grid div,
+  .valid,
+  .bomb,
+  .checked {
+    width: 34px;
+    height: 34px;
+  }
+  .grid div {
+    font-size: 0.85em;
+  }
+}

@@ -14,6 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
   let count = 0; // used for timer
   let intervalRef = null; // used for timer
   let isGameOver = false;
+  let pressTimer = null; // touch long-press
+  let lastLongPress = 0;
+  let longPressFired = false;
   
   // Create Board
   function createBoard() {
@@ -37,6 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Normal Click
       square.addEventListener('click', function(e) {
         if (isGameOver) { return }
+        if (Date.now() - lastLongPress < 350) { return } // click after a long-press flag
         emojiBtn.innerHTML = '😬';
         click(square);
       });
@@ -44,8 +48,26 @@ document.addEventListener('DOMContentLoaded', () => {
       // ctrl and Left Click
       square.oncontextmenu = function(e) {
         e.preventDefault();
+        if (Date.now() - lastLongPress < 1000) { return } // already flagged by long-press
         addFlag(square);
       }
+
+      // Touch: long-press to place or remove a flag
+      square.addEventListener('touchstart', function() {
+        clearTimeout(pressTimer);
+        longPressFired = false;
+        pressTimer = setTimeout(() => {
+          longPressFired = true;
+          lastLongPress = Date.now();
+          addFlag(square);
+        }, 450);
+      }, { passive: true });
+      ['touchend', 'touchmove', 'touchcancel'].forEach(type => {
+        square.addEventListener(type, () => {
+          clearTimeout(pressTimer);
+          if (longPressFired) { lastLongPress = Date.now(); longPressFired = false; }
+        }, { passive: true });
+      });
 
       // Mouseover
       square.addEventListener('mouseover', function(e) {
