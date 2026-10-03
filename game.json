@@ -1,9 +1,9 @@
 {
   "$schema": "https://raw.githubusercontent.com/pewplay/pewplay/main/schema/game.schema.json",
   "title": "90-Second Minesweeper",
-  "description": "Flag all 20 hidden mines on a 10x10 minefield before the 90-second clock runs out in this fast, free Minesweeper game in your browser.",
-  "about": "90-Second Minesweeper takes the classic logic puzzle and adds a ticking clock. The 10x10 board hides 20 mines, and every number you uncover tells you how many of them touch that square. Read the clues, mark each mine with a flag and do it all in a minute and a half.\n\nThe pressure changes how you play. There is no time to overthink every corner, so you learn to spot safe patterns quickly and trust your deductions. Uncover a mine or let the timer hit 90 and the game ends, showing where every bomb was hidden. A little emoji face reacts to each move, from nervous to cool when you win.\n\nIt is a great quick challenge for Minesweeper fans and anyone who enjoys short, tense logic puzzles.",
-  "howToPlay": "Reveal squares to uncover numbers that show how many mines touch that square; empty areas open up automatically. Mark every mine with a flag: you win when all 20 mines are flagged. Revealing a mine or running out of the 90 seconds ends the game, and the face button starts a new board.",
+  "description": "Flag all 20 hidden mines on a 10x10 minefield before the 90-second clock runs out in this fast, free Minesweeper game for desktop and mobile.",
+  "about": "90-Second Minesweeper takes the classic logic puzzle and adds a ticking clock. The 10x10 board hides 20 mines, and every number you uncover tells you how many of them touch that square. Read the clues, mark the mines with flags and clear the field in a minute and a half.\n\nThe pressure changes how you play. There is no time to overthink every corner, so you learn to spot safe patterns quickly and trust your deductions. Your first square is always safe and opens up an area to start from, and tapping a finished number clears its remaining neighbours in one go. Uncover a mine or let the clock reach zero and the game ends, showing where every bomb was hidden. A little emoji face reacts to each move, from nervous to cool when you win, and your best winning time is saved.\n\nThe board grows to fill any screen, from a big monitor to a phone held either way, and works just as well with a mouse or a finger.",
+  "howToPlay": "Reveal squares to uncover numbers that show how many mines touch that square; empty areas open up automatically and the first square is always safe. Mark mines with flags: you win when all 20 mines are flagged correctly or every safe square has been revealed. Click or tap a number whose mines are all flagged to open the rest of its neighbours. Revealing a mine or letting the 90 seconds run out ends the game; the face button starts a new board.",
   "controls": [
     {
       "input": "Click / Tap",
@@ -14,15 +14,28 @@
       "action": "Place or remove a flag"
     },
     {
-      "input": "Face button",
+      "input": "Flag mode button (M)",
+      "action": "Make taps place flags instead of revealing"
+    },
+    {
+      "input": "Click / Tap a number",
+      "action": "Open its neighbours when all its mines are flagged"
+    },
+    {
+      "input": "Arrow keys + Space / F",
+      "action": "Move the cursor, reveal, flag"
+    },
+    {
+      "input": "Face button (N)",
       "action": "Start a new game"
     }
   ],
   "tips": [
-    "Start by clicking near the middle: a square with no mines around it opens a big area at once.",
+    "Your first square is always safe and opens an area, so start near the middle.",
     "A 1 touching only one hidden square means that square is a mine, so flag it right away.",
-    "The flag counter shows how many mines are left to find, and you only have 20 flags.",
-    "Do not waste seconds on a pure guess early on; solve the obvious squares first."
+    "Once a number has all its mines flagged, tap it to clear the rest of its neighbours in one move.",
+    "On a phone, switch on Flag mode when you have many flags to place in a row.",
+    "The bar under the counters drains with the clock and turns red in the last 15 seconds."
   ],
   "faq": [
     {
@@ -31,11 +44,11 @@
     },
     {
       "question": "Can I play it on a phone or tablet?",
-      "answer": "Yes. Tap a square to reveal it and long-press to place or remove a flag; the board shrinks to fit phone screens."
+      "answer": "Yes. Tap a square to reveal it and long-press to place or remove a flag, or turn on Flag mode so every tap places a flag. The board resizes to fill the screen in portrait and landscape."
     },
     {
       "question": "How do I win?",
-      "answer": "Flag all 20 mines correctly before the timer reaches 90 seconds. Clearing safe squares helps you find them, but only the flags count toward the win."
+      "answer": "Flag all 20 mines correctly, or reveal every safe square, before the 90 seconds run out. Your best winning time is saved in your browser."
     }
   ],
   "category": "Puzzle",

@@ -2,22 +2,40 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>90-Second Minesweeper</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <div class="top">
-      <div class="flag-box" aria-label="Flags left"><h1>0<span id="flags-left"></span></h1></div>
-      <button class="emoji-btn" aria-label="New game"><h1>🙂</h1></button>
-      <div class="timer-box" aria-label="Seconds"><h1><span id="timer">0</span></h1></div>
+  <div id="app">
+    <div id="hud">
+      <div class="lcd" id="flags" aria-label="Flags left">20</div>
+      <button id="face" type="button" aria-label="New game">🙂</button>
+      <div class="lcd" id="timer" aria-label="Seconds left">90</div>
     </div>
-    <div class="grid"></div>
-    <div id="result"></div>
+    <div id="timebar" aria-hidden="true"><i></i></div>
+    <div id="wrap">
+      <div id="board" role="grid" aria-label="Minefield"></div>
+      <div id="dialog" class="hidden" role="dialog" aria-modal="false" aria-labelledby="dlgTitle">
+        <div class="card">
+          <div class="dlg-face" id="dlgFace">😎</div>
+          <h2 id="dlgTitle">You win!</h2>
+          <p id="dlgText"></p>
+          <p id="dlgBest" class="best"></p>
+          <div class="row">
+            <button type="button" id="dlgView" class="btn ghost">View board</button>
+            <button type="button" id="dlgNew" class="btn">New game</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="tools">
+      <button type="button" id="mode" class="btn mode" aria-pressed="false">
+        <span class="ico-flag" aria-hidden="true"></span><span id="modeLabel">Flag mode: off</span>
+      </button>
+      <div id="status" aria-live="polite">Tap any square to start the clock</div>
+    </div>
   </div>
-  <script src="./script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
